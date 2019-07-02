@@ -23,7 +23,7 @@ def add_cart(request, product_id):
         cart = Cart.objects.create(
             cart_id = _cart_id(request)
         )
-        cart.save()
+        cart.save(),
     try:
         cart_item = CartItem.objects.get(product=product, cart=cart)
         cart_item.quantity == 1
